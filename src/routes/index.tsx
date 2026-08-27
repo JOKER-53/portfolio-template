@@ -4,6 +4,7 @@ import config from "../config.json";
 import { Toaster } from "../components/ui/sonner";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import { CustomCursor, Stickers, CommandPalette, playPop } from "../components/Features";
 import {
   Accordion,
   AccordionContent,
@@ -1303,11 +1304,27 @@ function HomePage() {
         },
       });
     }, 1000);
-    return () => clearTimeout(timer);
+
+    // Global sound listener for hover interactions
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest("a, button, .neo-box, .neo-pill")) {
+        playPop();
+      }
+    };
+    document.addEventListener("mouseover", handleMouseOver);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mouseover", handleMouseOver);
+    };
   }, []);
 
   return (
     <>
+      <CustomCursor />
+      <Stickers />
+      <CommandPalette />
       <style>{`
         :root {
           --c-paper: #FFF8E7; /* Warm creamy background */
@@ -1340,8 +1357,8 @@ function HomePage() {
         }
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
         @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-33.333%)} }
-        html { scroll-behavior: smooth; }
-        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, border-color 0.3s, color 0.3s; }
+        html { scroll-behavior: smooth; cursor: none; }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, border-color 0.3s, color 0.3s; cursor: none; }
         body { background: var(--c-paper); color: var(--c-ink); }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--c-paper); }
