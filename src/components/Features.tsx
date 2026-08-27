@@ -8,14 +8,16 @@ import config from "../config.json";
 export function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       
       // Check if hovering over clickable elements
       const target = e.target as HTMLElement;
-      if (target.closest("a, button, .neo-box, .neo-pill")) {
+      if (target.closest("a, button, .neo-box, .neo-pill, [role='button']")) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -24,6 +26,8 @@ export function CustomCursor() {
     window.addEventListener("mousemove", updateMousePosition);
     return () => window.removeEventListener("mousemove", updateMousePosition);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <motion.div
@@ -35,9 +39,9 @@ export function CustomCursor() {
         height: 32,
         borderRadius: "50%",
         backgroundColor: "var(--c-ink)",
+        border: "2px solid var(--c-ink)",
         pointerEvents: "none",
-        zIndex: 9999,
-        mixBlendMode: "difference",
+        zIndex: 99999,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -45,12 +49,13 @@ export function CustomCursor() {
       animate={{
         x: mousePosition.x - 16,
         y: mousePosition.y - 16,
-        scale: isHovering ? 2 : 1,
+        scale: isHovering ? 2.5 : 1,
+        backgroundColor: isHovering ? "var(--c-paper)" : "var(--c-ink)",
       }}
       transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.5 }}
     >
       {isHovering && (
-        <span style={{ color: "var(--c-paper)", fontSize: "4px", fontWeight: "bold" }}>
+        <span style={{ color: "var(--c-ink)", fontSize: "5px", fontWeight: 900, fontFamily: "'Space Grotesk', sans-serif" }}>
           ACT
         </span>
       )}
