@@ -5,17 +5,25 @@ import { toast } from "sonner";
 import config from "../config.json";
 
 // --- 1. Custom Cursor ---
+import { useMotionValue, useSpring } from "framer-motion";
+
 export function CustomCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+
+  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
     setMounted(true);
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      // 8 is half of the 16px width/height to center the cursor
+      cursorX.set(e.clientX - 8);
+      cursorY.set(e.clientY - 8);
       
-      // Check if hovering over clickable elements
       const target = e.target as HTMLElement;
       if (target.closest("a, button, .neo-box, .neo-pill, [role='button']")) {
         setIsHovering(true);
@@ -35,31 +43,20 @@ export function CustomCursor() {
         position: "fixed",
         top: 0,
         left: 0,
-        width: 32,
-        height: 32,
+        width: 16,
+        height: 16,
         borderRadius: "50%",
         backgroundColor: "var(--c-ink)",
-        border: "2px solid var(--c-ink)",
         pointerEvents: "none",
         zIndex: 99999,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        x: cursorXSpring,
+        y: cursorYSpring,
       }}
       animate={{
-        x: mousePosition.x - 16,
-        y: mousePosition.y - 16,
-        scale: isHovering ? 2.5 : 1,
-        backgroundColor: isHovering ? "var(--c-paper)" : "var(--c-ink)",
+        scale: isHovering ? 1.5 : 1,
       }}
       transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.5 }}
-    >
-      {isHovering && (
-        <span style={{ color: "var(--c-ink)", fontSize: "5px", fontWeight: 900, fontFamily: "'Space Grotesk', sans-serif" }}>
-          ACT
-        </span>
-      )}
-    </motion.div>
+    />
   );
 }
 

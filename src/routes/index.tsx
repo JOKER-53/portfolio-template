@@ -1357,8 +1357,8 @@ function HomePage() {
         }
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
         @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-33.333%)} }
-        html { scroll-behavior: smooth; cursor: none; }
-        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, border-color 0.3s, color 0.3s; cursor: none; }
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, border-color 0.3s, color 0.3s; }
         body { background: var(--c-paper); color: var(--c-ink); }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--c-paper); }
