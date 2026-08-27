@@ -1,9 +1,4 @@
-import {
-  createRootRoute,
-  HeadContent,
-  Outlet,
-  Scripts,
-} from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import stylesUrl from "../styles.css?url";
 
@@ -35,21 +30,7 @@ function RootDocument({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-            <span className="text-lg font-bold tracking-tight">Portfolio</span>
-            <nav className="flex gap-6 text-sm font-medium">
-              <a href="#about" className="text-muted-foreground transition-colors hover:text-foreground">About</a>
-              <a href="#skills" className="text-muted-foreground transition-colors hover:text-foreground">Skills</a>
-              <a href="#projects" className="text-muted-foreground transition-colors hover:text-foreground">Projects</a>
-              <a href="#contact" className="text-muted-foreground transition-colors hover:text-foreground">Contact</a>
-            </nav>
-          </div>
-        </header>
         <main>{children}</main>
-        <footer className="border-t border-border mt-20 py-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Portfolio. Built with React + TanStack Start.</p>
-        </footer>
         <Scripts />
       </body>
     </html>

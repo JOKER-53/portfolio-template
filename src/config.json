@@ -1,0 +1,176 @@
+{
+  "profile": {
+    "name": "KADHIRAVAN E.G",
+    "alias": "JOKER53",
+    "folio": "W 0001 / 2026",
+    "location": "COIMBATORE · TN",
+    "status": "B.E. CYBER SECURITY · Y2",
+    "cgpa": "CGPA 8.6",
+    "company": "XARROWAI INDUSTRIES",
+    "bio": "Cybersecurity engineering student building secure, efficient software — from Wazuh SIEM pipelines to Dockerised compilers and OAuth attack simulations.",
+    "subtext": "This site is a manuscript, not a brochure. Read it slowly.",
+    "github": "https://github.com/KADHIRAVANEG",
+    "linkedin": "https://linkedin.com/in/kadhiravan-e-g-028818327",
+    "email": "kadhiravanegk@gmail.com",
+    "instagram": "https://www.instagram.com/__kadhiravan__",
+    "tryhackme": "https://tryhackme.com/r/p/JOKER53",
+    "website": "http://joker53.me/",
+    "available": true
+  },
+  "ticker": [
+    "CYBER SECURITY · B.E",
+    "SECURE CODING",
+    "WAZUH · SIEM",
+    "DEVSECOPS",
+    "DOCKER · CI/CD",
+    "C · C++ · PYTHON · JAVA · JS",
+    "OAUTH SIMULATION",
+    "LINUX HARDENING",
+    "CTF · JOKER53",
+    "TANSTACK START",
+    "BUG BOUNTY HUNTING",
+    "PENETRATION TESTING",
+    "I USE ARCH BTW"
+  ],
+  "disciplines": [
+    {
+      "code": "01",
+      "title": "CYBERSECURITY",
+      "sub": "Offensive & Defensive",
+      "items": [
+        "Network Penetration Testing",
+        "Wazuh SIEM Pipelines",
+        "OAuth Attack Simulation",
+        "Linux Hardening",
+        "Bug Bounty Hunting",
+        "CTF Competitions (JOKER53)"
+      ],
+      "tag": "CLASSIFIED"
+    },
+    {
+      "code": "02",
+      "title": "FULL STACK DEV",
+      "sub": "Web Engineering",
+      "items": [
+        "React 19 + TypeScript",
+        "TanStack Start (SSR)",
+        "Tailwind CSS v4",
+        "Node.js + Express",
+        "HTML5 · JavaScript"
+      ],
+      "tag": "ACTIVE"
+    },
+    {
+      "code": "03",
+      "title": "DEVOPS & CLOUD",
+      "sub": "Infrastructure",
+      "items": [
+        "Docker + CI/CD",
+        "GitHub Actions",
+        "Vercel · Render",
+        "Google Cloud Platform",
+        "Shell Scripting"
+      ],
+      "tag": "OPERATIONAL"
+    },
+    {
+      "code": "04",
+      "title": "LINUX & SYSTEMS",
+      "sub": "System Customization",
+      "items": [
+        "Arch Linux (daily driver)",
+        "SDDM Theme Collection",
+        "GRUB2 Bootloader Themes",
+        "KDE / Hyprland Ricing",
+        "QML Development"
+      ],
+      "tag": "OPEN SOURCE"
+    }
+  ],
+  "flagship": [
+    {
+      "id": "F-001",
+      "title": "INTELLIGENT COMPILER",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "A modern web-based intelligent compiler with AI-powered error detection and fixing capabilities. Built with HTML and modern web technologies.",
+      "stack": ["HTML", "JavaScript", "AI", "Web"],
+      "github": "https://github.com/KADHIRAVANEG/IntelligentCompiler",
+      "live": ""
+    },
+    {
+      "id": "F-002",
+      "title": "PORTFOLIO TEMPLATE",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "A fully-typed developer portfolio template built with React 19, TanStack Start, Tailwind CSS v4, and shadcn/ui. SSR-ready. Deployable to Vercel in minutes.",
+      "stack": ["React 19", "TypeScript", "TanStack Start", "Tailwind v4", "Vercel"],
+      "github": "https://github.com/KADHIRAVANEG/portfolio-template",
+      "live": "https://portfolio-template-one-delta.vercel.app/"
+    },
+    {
+      "id": "F-003",
+      "title": "SDDM THEME COLLECTION",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "QML-based SDDM lockscreen themes for Linux desktops. Clean, minimal, and easy to install. Showcased on GitHub Pages.",
+      "stack": ["QML", "Linux", "Shell Script", "GitHub Pages"],
+      "github": "https://github.com/KADHIRAVANEG",
+      "live": ""
+    },
+    {
+      "id": "F-004",
+      "title": "GRUB2 THEME COLLECTION",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "A GRUB2 bootloader theme collection with automated installer scripts. Quality-reviewed and cross-distro compatible.",
+      "stack": ["Shell Script", "GRUB2", "Linux"],
+      "github": "https://github.com/KADHIRAVANEG",
+      "live": ""
+    },
+    {
+      "id": "F-005",
+      "title": "XARROWAI SYSTEM UX",
+      "classification": "RESTRICTED · PROPRIETARY",
+      "description": "System-level UX engineering for AI-powered products at XarrowAI Industries. Focused on performance, accessibility, and seamless user experiences.",
+      "stack": ["React", "TypeScript", "UX Engineering", "AI"],
+      "github": "",
+      "live": ""
+    }
+  ],
+  "channels": [
+    {
+      "label": "EMAIL",
+      "value": "kadhiravanegk@gmail.com",
+      "href": "mailto:kadhiravanegk@gmail.com",
+      "icon": "✉"
+    },
+    {
+      "label": "GITHUB",
+      "value": "KADHIRAVANEG",
+      "href": "https://github.com/KADHIRAVANEG",
+      "icon": "◈"
+    },
+    {
+      "label": "LINKEDIN",
+      "value": "kadhiravan-e-g",
+      "href": "https://linkedin.com/in/kadhiravan-e-g-028818327",
+      "icon": "◉"
+    },
+    {
+      "label": "TRYHACKME",
+      "value": "JOKER53",
+      "href": "https://tryhackme.com/r/p/JOKER53",
+      "icon": "⬡"
+    },
+    {
+      "label": "INSTAGRAM",
+      "value": "__kadhiravan__",
+      "href": "https://www.instagram.com/__kadhiravan__",
+      "icon": "◎"
+    },
+    { "label": "WEBSITE", "value": "joker53.me", "href": "http://joker53.me/", "icon": "◌" }
+  ],
+  "exploring": [
+    "Advanced Penetration Testing",
+    "Web Application Security",
+    "Cloud Security & DevSecOps",
+    "Bug Bounty Hunting"
+  ]
+}

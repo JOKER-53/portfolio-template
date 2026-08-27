@@ -123,17 +123,17 @@ bun run format
 
 ## 🛠️ Tech Stack
 
-| Tool | Version | Purpose |
-|---|---|---|
-| React | 19 | UI framework |
-| TanStack Router | ^1.168 | File-based routing |
-| TanStack Start | ^1.167 | SSR framework |
-| TanStack Query | ^5.83 | Data fetching |
-| Vite | ^8 | Build tool |
-| Tailwind CSS | ^4 | Styling |
-| shadcn/ui | latest | UI components |
-| TypeScript | ^5.8 | Type safety |
-| Bun | latest | Package manager |
+| Tool            | Version | Purpose            |
+| --------------- | ------- | ------------------ |
+| React           | 19      | UI framework       |
+| TanStack Router | ^1.168  | File-based routing |
+| TanStack Start  | ^1.167  | SSR framework      |
+| TanStack Query  | ^5.83   | Data fetching      |
+| Vite            | ^8      | Build tool         |
+| Tailwind CSS    | ^4      | Styling            |
+| shadcn/ui       | latest  | UI components      |
+| TypeScript      | ^5.8    | Type safety        |
+| Bun             | latest  | Package manager    |
 
 ---
 
@@ -169,4 +169,5 @@ This project is open source. Add a `LICENSE` file (e.g. MIT) to make it official
 ## 👤 Author
 
 **KADHIRAVANEG**
+
 - GitHub: [@KADHIRAVANEG](https://github.com/KADHIRAVANEG)
