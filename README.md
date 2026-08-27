@@ -1,6 +1,6 @@
-# 🗂️ Portfolio Template
+# 🗂️ Portfolio Template - The Dossier
 
-A modern, fully-typed portfolio template built with **React 19**, **TanStack Start**, **Tailwind CSS v4**, and **shadcn/ui** — ready to customize and deploy.
+A modern, highly-customizable, terminal-aesthetic portfolio template built with **React 19**, **TanStack Start**, **Tailwind CSS v4**, and **shadcn/ui**. It comes fully equipped with a CLI installer and automated GitHub sync!
 
 ---
 
@@ -9,11 +9,11 @@ A modern, fully-typed portfolio template built with **React 19**, **TanStack Sta
 - ⚡ **Vite 8** — lightning-fast dev server and builds
 - 🧭 **TanStack Router** — file-based, type-safe routing
 - 🌐 **TanStack Start** — SSR support out of the box
+- 🖥️ **CLI Setup Script** — configure your details right from the terminal
+- 🤖 **Auto-Sync GitHub Action** — automatically pulls your latest repositories daily
 - 🎨 **Tailwind CSS v4** — utility-first styling
 - 🧩 **shadcn/ui** — accessible, customizable UI components
-- 📦 **TanStack Query** — async state and data fetching
 - 🦺 **TypeScript** — end-to-end type safety
-- 🐇 **Bun** — fast package manager and runtime
 - 🧹 **ESLint + Prettier** — consistent code style
 
 ---
@@ -22,10 +22,10 @@ A modern, fully-typed portfolio template built with **React 19**, **TanStack Sta
 
 ### Prerequisites
 
-- [Bun](https://bun.sh) `>= 1.0`
-- Node.js `>= 20` (optional, if not using Bun for runtime)
+- Node.js `>= 20`
+- [Bun](https://bun.sh) (Optional, but recommended)
 
-### Installation
+### 1. Installation
 
 ```bash
 # Clone the repository
@@ -33,49 +33,62 @@ git clone https://github.com/KADHIRAVANEG/portfolio-template.git
 cd portfolio-template
 
 # Install dependencies
-bun install
+npm install  # or bun install
 ```
 
-### Development
+### 2. Configuration (CLI Installer)
+
+We built an interactive Bash script to instantly customize the portfolio with your personal details. Just run:
 
 ```bash
-bun dev
+./install.sh
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the magic.
+_This will safely update `src/config.json` with your Name, Alias, Role, Location, and Social Links!_
 
-### Build
+### 3. Development
 
 ```bash
-# Production build
-bun run build
-
-# Preview production build locally
-bun run preview
+npm run dev  # or bun dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view your live dossier.
+
+---
+
+## 🤖 GitHub Auto-Sync
+
+Tired of manually updating your projects section? We've got you covered.
+
+This template includes a pre-configured **GitHub Action** (`.github/workflows/sync-projects.yml`) and a script (`scripts/sync-projects.js`) that automatically checks your GitHub profile **every day at midnight UTC**.
+
+- It pulls your top 6 recently updated, non-forked repositories.
+- It dynamically assigns tech-stack tags based on languages/topics.
+- It automatically pushes updates to your `src/config.json`.
+
+**To trigger it manually:** Go to your GitHub repository -> Actions -> "Auto-Sync Portfolio Projects" -> Run workflow.
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 portfolio-template/
+├── .github/
+│   └── workflows/
+│       └── sync-projects.yml # Automated GitHub sync action
+├── scripts/
+│   └── sync-projects.js      # Script that fetches GitHub repos
 ├── src/
 │   ├── routes/
-│   │   ├── __root.tsx        # Root layout (navbar, footer)
-│   │   └── index.tsx         # Home page
-│   ├── components/
-│   │   └── ui/               # shadcn/ui components
-│   ├── styles/
-│   │   └── app.css           # Global styles + Tailwind directives
+│   │   ├── __root.tsx        # Root layout (Tailwind header/footer removed for custom style)
+│   │   └── index.tsx         # The main Dossier UI page
+│   ├── config.json           # Your configuration and data (Auto-updated!)
+│   ├── components/           # shadcn/ui and custom components
+│   ├── styles/               # Global CSS + Tailwind directives
 │   ├── client.tsx            # Client entry point
 │   └── server.tsx            # Server entry point (SSR)
-├── public/                   # Static assets (favicon, images)
-├── components.json           # shadcn/ui config
-├── vite.config.ts            # Vite + TanStack Start config
-├── tsconfig.json             # TypeScript config
-├── .prettierrc               # Prettier config
-├── eslint.config.js          # ESLint config
+├── install.sh                # Interactive CLI setup script
 └── package.json
 ```
 
@@ -83,29 +96,13 @@ portfolio-template/
 
 ## 🎨 Customization
 
-### Update Your Info
+### Advanced Config
 
-Edit the content in `src/routes/index.tsx` to add your name, bio, skills, and projects.
+If you want to modify your skills, disciplines, or exploring sections, you can directly edit `src/config.json`. There's no need to touch the JSX/UI code just to change your text!
 
-### Add a New Section
+### Theming
 
-Create a new component in `src/components/` and import it into your page.
-
-### Add a New Page/Route
-
-Create a new file under `src/routes/` — TanStack Router will automatically pick it up. For example:
-
-```
-src/routes/projects.tsx  →  /projects
-src/routes/contact.tsx   →  /contact
-```
-
-### Add shadcn/ui Components
-
-```bash
-bunx shadcn@latest add button
-bunx shadcn@latest add card
-```
+The Dossier aesthetic relies heavily on the color constants defined in `src/routes/index.tsx`. You can alter the `C` object to change the paper, ink, yellow, and red colors.
 
 ---
 
@@ -113,56 +110,31 @@ bunx shadcn@latest add card
 
 ```bash
 # Lint
-bun run lint
+npm run lint
 
-# Format
-bun run format
+# Format (Fix prettier errors)
+npm run format
 ```
-
----
-
-## 🛠️ Tech Stack
-
-| Tool            | Version | Purpose            |
-| --------------- | ------- | ------------------ |
-| React           | 19      | UI framework       |
-| TanStack Router | ^1.168  | File-based routing |
-| TanStack Start  | ^1.167  | SSR framework      |
-| TanStack Query  | ^5.83   | Data fetching      |
-| Vite            | ^8      | Build tool         |
-| Tailwind CSS    | ^4      | Styling            |
-| shadcn/ui       | latest  | UI components      |
-| TypeScript      | ^5.8    | Type safety        |
-| Bun             | latest  | Package manager    |
 
 ---
 
 ## 📦 Deployment
 
-This template supports SSR via TanStack Start. You can deploy to:
+This template supports SSR via TanStack Start. You can easily deploy to Vercel, Netlify, or Cloudflare Pages.
 
-- **Vercel** — add a `vercel.json` if needed
-- **Netlify** — works with SSR adapter
-- **Cloudflare Pages** — use the Nitro Cloudflare preset
-- **Node.js server** — `bun run build && bun run preview`
+```bash
+# Production build
+npm run build
+
+# Preview production build locally
+npm run preview
+```
 
 ---
 
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feat/your-feature`
-3. Commit your changes: `git commit -m 'feat: add your feature'`
-4. Push to the branch: `git push origin feat/your-feature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is open source. Add a `LICENSE` file (e.g. MIT) to make it official.
 
 ---
 
