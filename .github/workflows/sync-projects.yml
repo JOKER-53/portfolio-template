@@ -3,14 +3,14 @@ name: Auto-Sync Portfolio Projects
 on:
   schedule:
     # Run automatically every day at midnight UTC
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
     # Allow running manually from the Actions tab
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write # Needed to push changes back to the repo
 
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Run Sync Script
         run: node scripts/sync-projects.js
@@ -36,7 +36,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add src/config.json
-          
+
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit."

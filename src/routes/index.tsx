@@ -1,6 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import config from "../config.json";
+import { Toaster } from "../components/ui/sonner";
+import { toast } from "sonner";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/ui/accordion";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "../components/ui/hover-card";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -11,12 +20,12 @@ const { profile, ticker, disciplines, flagship, channels, exploring } = config;
 // ─────────────────────────────────────────────────────────────────────────────
 
 const C = {
-  paper: "#F2EFE6",
-  ink: "#1A1A1A",
-  yellow: "#F5C800",
-  red: "#CC2200",
-  muted: "#6B6B5E",
-  border: "#C8C4B0",
+  paper: "var(--c-paper)",
+  ink: "var(--c-ink)",
+  yellow: "var(--c-yellow)",
+  red: "var(--c-red)",
+  muted: "var(--c-muted)",
+  border: "var(--c-border)",
 };
 
 function Ticker() {
@@ -62,12 +71,22 @@ function Ticker() {
 
 function Navbar() {
   const [time, setTime] = useState("");
+  const [nightVision, setNightVision] = useState(false);
+
   useEffect(() => {
     const update = () => setTime(new Date().toISOString().slice(11, 19) + " UTC");
     update();
     const id = setInterval(update, 1000);
     return () => clearInterval(id);
   }, []);
+
+  useEffect(() => {
+    if (nightVision) {
+      document.documentElement.classList.add("night-vision", "dark");
+    } else {
+      document.documentElement.classList.remove("night-vision", "dark");
+    }
+  }, [nightVision]);
 
   return (
     <nav
@@ -107,7 +126,7 @@ function Navbar() {
             letterSpacing: "0.06em",
           }}
         >
-          SUBJECT: KADHIRAVAN E.G
+          SUBJECT: {profile.name}
         </span>
       </div>
       <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
@@ -131,17 +150,36 @@ function Navbar() {
           </a>
         ))}
       </div>
-      <span
-        style={{
-          fontFamily: "'Space Grotesk',sans-serif",
-          fontWeight: 600,
-          fontSize: "0.75rem",
-          color: C.muted,
-          letterSpacing: "0.06em",
-        }}
-      >
-        {time}
-      </span>
+      <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+        <button
+          onClick={() => setNightVision(!nightVision)}
+          style={{
+            background: nightVision ? C.ink : "transparent",
+            border: `2px solid ${C.ink}`,
+            color: nightVision ? C.paper : C.ink,
+            padding: "4px 10px",
+            fontFamily: "'Space Grotesk',sans-serif",
+            fontWeight: 800,
+            fontSize: "0.7rem",
+            letterSpacing: "0.1em",
+            cursor: "pointer",
+            transition: "all 0.2s",
+          }}
+        >
+          {nightVision ? "NIGHT VISION: ON" : "NIGHT VISION: OFF"}
+        </button>
+        <span
+          style={{
+            fontFamily: "'Space Grotesk',sans-serif",
+            fontWeight: 600,
+            fontSize: "0.75rem",
+            color: C.muted,
+            letterSpacing: "0.06em",
+          }}
+        >
+          {time}
+        </span>
+      </div>
     </nav>
   );
 }
@@ -726,118 +764,133 @@ function Disciplines() {
           DISCIPLINES — AREAS OF OPERATION
         </h2>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-        {disciplines.map((d, i) => (
-          <div
-            key={d.code}
-            onMouseEnter={() => setActive(i)}
-            onMouseLeave={() => setActive(null)}
-            style={{
-              padding: "2.5rem",
-              borderBottom: `1px solid ${C.border}`,
-              borderRight: i % 2 === 0 ? `1px solid ${C.border}` : "none",
-              background: active === i ? C.ink : "transparent",
-              transition: "background 0.2s",
-              cursor: "default",
-            }}
-          >
-            <div
+      <div style={{ padding: "2rem 2.5rem" }}>
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full"
+          style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+        >
+          {disciplines.map((d, i) => (
+            <AccordionItem
+              key={d.code}
+              value={d.code}
               style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-                marginBottom: "1rem",
+                border: `2px solid ${C.ink}`,
+                background: "transparent",
               }}
             >
-              <span
+              <AccordionTrigger
                 style={{
+                  padding: "1.5rem",
                   fontFamily: "'Space Grotesk',sans-serif",
-                  fontWeight: 800,
-                  fontSize: "0.7rem",
-                  color: active === i ? C.yellow : C.muted,
-                  letterSpacing: "0.12em",
+                  textDecoration: "none",
                 }}
+                className="hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
               >
-                {d.code}
-              </span>
-              <div
-                style={{
-                  background: active === i ? C.yellow : C.ink,
-                  border: `2px solid ${active === i ? C.yellow : C.ink}`,
-                  padding: "3px 10px",
-                }}
-              >
-                <span
+                <div
                   style={{
-                    fontFamily: "'Space Grotesk',sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.62rem",
-                    color: active === i ? C.ink : C.paper,
-                    letterSpacing: "0.1em",
+                    display: "flex",
+                    width: "100%",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    paddingRight: "1rem",
                   }}
                 >
-                  {d.tag}
-                </span>
-              </div>
-            </div>
-            <h3
-              style={{
-                fontFamily: "'Space Grotesk',sans-serif",
-                fontWeight: 800,
-                fontSize: "1.6rem",
-                color: active === i ? C.paper : C.ink,
-                letterSpacing: "-0.02em",
-                marginBottom: "0.25rem",
-              }}
-            >
-              {d.title}
-            </h3>
-            <p
-              style={{
-                fontFamily: "'Space Grotesk',sans-serif",
-                fontSize: "0.78rem",
-                color: active === i ? C.yellow : C.muted,
-                letterSpacing: "0.08em",
-                marginBottom: "1.25rem",
-              }}
-            >
-              {d.sub}
-            </p>
-            <ul
-              style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}
-            >
-              {d.items.map((item) => (
-                <li
-                  key={item}
-                  style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}
+                  <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+                    <span
+                      style={{
+                        fontWeight: 800,
+                        fontSize: "0.8rem",
+                        color: C.yellow,
+                        letterSpacing: "0.12em",
+                      }}
+                    >
+                      {d.code}
+                    </span>
+                    <h3
+                      style={{
+                        fontWeight: 800,
+                        fontSize: "1.2rem",
+                        color: C.ink,
+                        letterSpacing: "-0.02em",
+                        margin: 0,
+                      }}
+                    >
+                      {d.title}
+                    </h3>
+                  </div>
+                  <div
+                    style={{ background: C.ink, border: `2px solid ${C.ink}`, padding: "3px 10px" }}
+                  >
+                    <span
+                      style={{
+                        fontWeight: 800,
+                        fontSize: "0.62rem",
+                        color: C.paper,
+                        letterSpacing: "0.1em",
+                      }}
+                    >
+                      {d.tag}
+                    </span>
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent style={{ padding: "0 1.5rem 1.5rem 1.5rem" }}>
+                <p
+                  style={{
+                    fontFamily: "'Space Grotesk',sans-serif",
+                    fontSize: "0.85rem",
+                    color: C.muted,
+                    letterSpacing: "0.08em",
+                    marginBottom: "1.25rem",
+                    marginTop: "0.5rem",
+                  }}
                 >
-                  <span
-                    style={{
-                      color: active === i ? C.yellow : C.muted,
-                      fontFamily: "'Space Grotesk',sans-serif",
-                      fontWeight: 800,
-                      fontSize: "0.7rem",
-                      paddingTop: "3px",
-                      flexShrink: 0,
-                    }}
-                  >
-                    —
-                  </span>
-                  <span
-                    style={{
-                      fontFamily: "Georgia,serif",
-                      fontSize: "0.88rem",
-                      color: active === i ? "#E8E5DC" : C.ink,
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                  {d.sub}
+                </p>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                    gap: "1rem",
+                  }}
+                >
+                  {d.items.map((item) => (
+                    <li
+                      key={item}
+                      style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}
+                    >
+                      <span
+                        style={{
+                          color: C.yellow,
+                          fontFamily: "'Space Grotesk',sans-serif",
+                          fontWeight: 800,
+                          fontSize: "0.7rem",
+                          paddingTop: "3px",
+                          flexShrink: 0,
+                        }}
+                      >
+                        —
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "Georgia,serif",
+                          fontSize: "0.95rem",
+                          color: C.ink,
+                          lineHeight: 1.5,
+                        }}
+                      >
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
@@ -976,20 +1029,48 @@ function FlagshipRow({ project, last }: { project: (typeof flagship)[0]; last: b
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
           {project.stack.map((s) => (
-            <span
-              key={s}
-              style={{
-                fontFamily: "'Space Grotesk',sans-serif",
-                fontWeight: 700,
-                fontSize: "0.68rem",
-                color: hovered ? C.paper : C.ink,
-                letterSpacing: "0.08em",
-                border: `1px solid ${hovered ? "rgba(255,255,255,0.2)" : C.border}`,
-                padding: "3px 10px",
-              }}
-            >
-              {s}
-            </span>
+            <HoverCard key={s}>
+              <HoverCardTrigger>
+                <span
+                  style={{
+                    fontFamily: "'Space Grotesk',sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.68rem",
+                    color: hovered ? C.paper : C.ink,
+                    letterSpacing: "0.08em",
+                    border: `1px solid ${hovered ? "rgba(255,255,255,0.2)" : C.border}`,
+                    padding: "3px 10px",
+                    cursor: "help",
+                    display: "inline-block",
+                  }}
+                >
+                  {s}
+                </span>
+              </HoverCardTrigger>
+              <HoverCardContent
+                style={{
+                  background: C.paper,
+                  color: C.ink,
+                  border: `2px solid ${C.ink}`,
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  borderRadius: 0,
+                }}
+              >
+                <p
+                  style={{
+                    fontWeight: 800,
+                    fontSize: "0.8rem",
+                    marginBottom: "0.25rem",
+                    color: C.red,
+                  }}
+                >
+                  {s.toUpperCase()}
+                </p>
+                <p style={{ fontSize: "0.75rem", fontFamily: "Georgia, serif" }}>
+                  Core technology used in this deployment operation.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
           ))}
         </div>
       </div>
@@ -1219,17 +1300,50 @@ function Footer() {
 }
 
 function HomePage() {
+  useEffect(() => {
+    // Show toast after a slight delay to mimic boot sequence
+    const timer = setTimeout(() => {
+      toast.success("ACCESS GRANTED", {
+        description: "Welcome to the Dossier. Decryption successful.",
+        style: {
+          background: "var(--c-ink)",
+          color: "var(--c-paper)",
+          border: "2px solid var(--c-yellow)",
+          fontFamily: "'Space Grotesk', sans-serif",
+          borderRadius: "0",
+        },
+      });
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <style>{`
+        :root {
+          --c-paper: #F2EFE6;
+          --c-ink: #1A1A1A;
+          --c-yellow: #F5C800;
+          --c-red: #CC2200;
+          --c-muted: #6B6B5E;
+          --c-border: #C8C4B0;
+        }
+        .night-vision {
+          --c-paper: #050505;
+          --c-ink: #22c55e;
+          --c-yellow: #eab308;
+          --c-red: #ef4444;
+          --c-muted: #166534;
+          --c-border: #14532d;
+        }
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
         @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-33.333%)} }
         html { scroll-behavior: smooth; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: ${C.paper}; }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, border-color 0.3s; }
+        body { background: var(--c-paper); color: var(--c-ink); }
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: ${C.paper}; }
-        ::-webkit-scrollbar-thumb { background: ${C.ink}; }
+        ::-webkit-scrollbar-track { background: var(--c-paper); }
+        ::-webkit-scrollbar-thumb { background: var(--c-ink); }
       `}</style>
       <Navbar />
       <Hero />
@@ -1239,6 +1353,7 @@ function HomePage() {
       <Flagship />
       <Channels />
       <Footer />
+      <Toaster position="bottom-right" />
     </>
   );
 }

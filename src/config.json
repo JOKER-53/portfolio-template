@@ -93,9 +93,7 @@
       "title": "PORTFOLIO",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository gives templete to  build  for building  portfolio ",
-      "stack": [
-        "TypeScript"
-      ],
+      "stack": ["TypeScript"],
       "github": "https://github.com/KADHIRAVANEG/Portfolio",
       "live": "https://joker53.vercel.app/"
     },
@@ -104,9 +102,7 @@
       "title": "FLAMES",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "FLAMES is an interactive web-based training platform designed to teach firewall and network security concepts in a hands-on, gamified manner.  It simulates a FortiOS-styled web interface where students configure firewall policies, network interfaces, and port assignments.",
-      "stack": [
-        "TypeScript"
-      ],
+      "stack": ["TypeScript"],
       "github": "https://github.com/KADHIRAVANEG/FLAMES",
       "live": ""
     },
@@ -115,9 +111,7 @@
       "title": "LEARN GIT",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "A hands-on, browser/terminal-based platform to learn Git by actually using it — not by reading about it.",
-      "stack": [
-        "Python"
-      ],
+      "stack": ["Python"],
       "github": "https://github.com/KADHIRAVANEG/learn-git",
       "live": ""
     },
@@ -126,9 +120,7 @@
       "title": "NODEWIPE",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repo is  to identify and remove unwanted node packeges.",
-      "stack": [
-        "Rust"
-      ],
+      "stack": ["Rust"],
       "github": "https://github.com/KADHIRAVANEG/nodewipe",
       "live": ""
     },
@@ -137,9 +129,7 @@
       "title": "INTELLIGENTCOMPILER",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "A modern web-based intelligent compiler with AI-powered error detection and fixing capabilities.",
-      "stack": [
-        "HTML"
-      ],
+      "stack": ["HTML"],
       "github": "https://github.com/KADHIRAVANEG/IntelligentCompiler",
       "live": "https://intelligentcompiler.onrender.com"
     },
@@ -148,9 +138,7 @@
       "title": "GRUB THEMES",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository is for configuring the grub of the linux",
-      "stack": [
-        "CSS"
-      ],
+      "stack": ["CSS"],
       "github": "https://github.com/KADHIRAVANEG/grub-themes",
       "live": "http://joker53.me/grub-themes/"
     }
