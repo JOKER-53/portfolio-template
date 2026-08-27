@@ -90,48 +90,69 @@
   "flagship": [
     {
       "id": "F-001",
-      "title": "INTELLIGENT COMPILER",
+      "title": "PORTFOLIO",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "A modern web-based intelligent compiler with AI-powered error detection and fixing capabilities. Built with HTML and modern web technologies.",
-      "stack": ["HTML", "JavaScript", "AI", "Web"],
-      "github": "https://github.com/KADHIRAVANEG/IntelligentCompiler",
-      "live": ""
+      "description": "This repository gives templete to  build  for building  portfolio ",
+      "stack": [
+        "TypeScript"
+      ],
+      "github": "https://github.com/KADHIRAVANEG/Portfolio",
+      "live": "https://joker53.vercel.app/"
     },
     {
       "id": "F-002",
-      "title": "PORTFOLIO TEMPLATE",
+      "title": "FLAMES",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "A fully-typed developer portfolio template built with React 19, TanStack Start, Tailwind CSS v4, and shadcn/ui. SSR-ready. Deployable to Vercel in minutes.",
-      "stack": ["React 19", "TypeScript", "TanStack Start", "Tailwind v4", "Vercel"],
-      "github": "https://github.com/KADHIRAVANEG/portfolio-template",
-      "live": "https://portfolio-template-one-delta.vercel.app/"
+      "description": "FLAMES is an interactive web-based training platform designed to teach firewall and network security concepts in a hands-on, gamified manner.  It simulates a FortiOS-styled web interface where students configure firewall policies, network interfaces, and port assignments.",
+      "stack": [
+        "TypeScript"
+      ],
+      "github": "https://github.com/KADHIRAVANEG/FLAMES",
+      "live": ""
     },
     {
       "id": "F-003",
-      "title": "SDDM THEME COLLECTION",
+      "title": "LEARN GIT",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "QML-based SDDM lockscreen themes for Linux desktops. Clean, minimal, and easy to install. Showcased on GitHub Pages.",
-      "stack": ["QML", "Linux", "Shell Script", "GitHub Pages"],
-      "github": "https://github.com/KADHIRAVANEG",
+      "description": "A hands-on, browser/terminal-based platform to learn Git by actually using it — not by reading about it.",
+      "stack": [
+        "Python"
+      ],
+      "github": "https://github.com/KADHIRAVANEG/learn-git",
       "live": ""
     },
     {
       "id": "F-004",
-      "title": "GRUB2 THEME COLLECTION",
+      "title": "NODEWIPE",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "A GRUB2 bootloader theme collection with automated installer scripts. Quality-reviewed and cross-distro compatible.",
-      "stack": ["Shell Script", "GRUB2", "Linux"],
-      "github": "https://github.com/KADHIRAVANEG",
+      "description": "This repo is  to identify and remove unwanted node packeges.",
+      "stack": [
+        "Rust"
+      ],
+      "github": "https://github.com/KADHIRAVANEG/nodewipe",
       "live": ""
     },
     {
       "id": "F-005",
-      "title": "XARROWAI SYSTEM UX",
-      "classification": "RESTRICTED · PROPRIETARY",
-      "description": "System-level UX engineering for AI-powered products at XarrowAI Industries. Focused on performance, accessibility, and seamless user experiences.",
-      "stack": ["React", "TypeScript", "UX Engineering", "AI"],
-      "github": "",
-      "live": ""
+      "title": "INTELLIGENTCOMPILER",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "A modern web-based intelligent compiler with AI-powered error detection and fixing capabilities.",
+      "stack": [
+        "HTML"
+      ],
+      "github": "https://github.com/KADHIRAVANEG/IntelligentCompiler",
+      "live": "https://intelligentcompiler.onrender.com"
+    },
+    {
+      "id": "F-006",
+      "title": "GRUB THEMES",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "This repository is for configuring the grub of the linux",
+      "stack": [
+        "CSS"
+      ],
+      "github": "https://github.com/KADHIRAVANEG/grub-themes",
+      "live": "http://joker53.me/grub-themes/"
     }
   ],
   "channels": [
@@ -165,7 +186,12 @@
       "href": "https://www.instagram.com/__kadhiravan__",
       "icon": "◎"
     },
-    { "label": "WEBSITE", "value": "joker53.me", "href": "http://joker53.me/", "icon": "◌" }
+    {
+      "label": "WEBSITE",
+      "value": "joker53.me",
+      "href": "http://joker53.me/",
+      "icon": "◌"
+    }
   ],
   "exploring": [
     "Advanced Penetration Testing",
