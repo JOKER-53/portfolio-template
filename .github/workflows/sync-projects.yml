@@ -1,0 +1,47 @@
+name: Auto-Sync Portfolio Projects
+
+on:
+  schedule:
+    # Run automatically every day at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allow running manually from the Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write # Needed to push changes back to the repo
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Sync Script
+        run: node scripts/sync-projects.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Format JSON Output
+        run: npx prettier --write src/config.json
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/config.json
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-sync flagship projects from github [skip ci]"
+            git push
+            echo "Changes pushed successfully."
+          fi
