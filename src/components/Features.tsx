@@ -91,30 +91,6 @@ export function Stickers() {
         </span>
       </motion.div>
 
-      {/* Smiley Sticker */}
-      <motion.div
-        drag
-        dragConstraints={{ left: 0, right: window.innerWidth - 100, top: 0, bottom: window.innerHeight - 100 }}
-        whileDrag={{ scale: 1.1, rotate: -15, cursor: "grabbing" }}
-        style={{
-          position: "absolute",
-          bottom: "20%",
-          left: "5%",
-          pointerEvents: "auto",
-          cursor: "grab",
-          background: "var(--c-yellow)",
-          border: "3px solid var(--c-ink)",
-          borderRadius: "50%",
-          width: "80px",
-          height: "80px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          boxShadow: "4px 4px 0px var(--c-ink)",
-        }}
-      >
-        <span style={{ fontSize: "2.5rem" }}>🙂</span>
-      </motion.div>
     </div>
   );
 }
