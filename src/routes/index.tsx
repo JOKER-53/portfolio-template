@@ -4,7 +4,7 @@ import config from "../config.json";
 import { Toaster } from "../components/ui/sonner";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
-import { CustomCursor, Stickers, CommandPalette, playPop } from "../components/Features";
+import { CustomCursor, Stickers, CommandPalette } from "../components/Features";
 import {
   Accordion,
   AccordionContent,
@@ -1305,18 +1305,8 @@ function HomePage() {
       });
     }, 1000);
 
-    // Global sound listener for hover interactions
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.closest("a, button, .neo-box, .neo-pill")) {
-        playPop();
-      }
-    };
-    document.addEventListener("mouseover", handleMouseOver);
-
     return () => {
       clearTimeout(timer);
-      document.removeEventListener("mouseover", handleMouseOver);
     };
   }, []);
 
