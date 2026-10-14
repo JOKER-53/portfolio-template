@@ -140,7 +140,7 @@
       "description": "This repository is for configuring the grub of the linux",
       "stack": ["CSS"],
       "github": "https://github.com/JOKER-53/grub-themes",
-      "live": "http://joker53.me/grub-themes/"
+      "live": "https://joker-53.github.io/grub-themes/"
     }
   ],
   "channels": [
@@ -152,7 +152,7 @@
     },
     {
       "label": "GITHUB",
-      "value": "KADHIRAVANEG",
+      "value": "JOKER-53",
       "href": "https://github.com/JOKER-53",
       "icon": "◈"
     },

@@ -140,6 +140,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 👤 Author
 
-**KADHIRAVANEG**
+**JOKER-53**
 
 - GitHub: [@JOKER-53](https://github.com/JOKER-53)
