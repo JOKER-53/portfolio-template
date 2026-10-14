@@ -9,9 +9,9 @@
     "company": "XARROWAI INDUSTRIES",
     "bio": "Cybersecurity engineering student building secure, efficient software — from Wazuh SIEM pipelines to Dockerised compilers and OAuth attack simulations.",
     "subtext": "This site is a manuscript, not a brochure. Read it slowly.",
-    "github": "https://github.com/KADHIRAVANEG",
+    "github": "https://github.com/JOKER-53",
     "linkedin": "https://linkedin.com/in/kadhiravan-e-g-028818327",
-    "email": "kadhiravanegk@gmail.com",
+    "email": "kadhiravan226@gmail.com",
     "instagram": "https://www.instagram.com/__kadhiravan__",
     "tryhackme": "https://tryhackme.com/r/p/JOKER53",
     "website": "http://joker53.me/",
@@ -94,7 +94,7 @@
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository gives templete to  build  for building  portfolio ",
       "stack": ["TypeScript"],
-      "github": "https://github.com/KADHIRAVANEG/Portfolio",
+      "github": "https://github.com/JOKER-53/Portfolio",
       "live": "https://joker53.vercel.app/"
     },
     {
@@ -103,7 +103,7 @@
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "FLAMES is an interactive web-based training platform designed to teach firewall and network security concepts in a hands-on, gamified manner.  It simulates a FortiOS-styled web interface where students configure firewall policies, network interfaces, and port assignments.",
       "stack": ["TypeScript"],
-      "github": "https://github.com/KADHIRAVANEG/FLAMES",
+      "github": "https://github.com/JOKER-53/FLAMES",
       "live": ""
     },
     {
@@ -112,7 +112,7 @@
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "A hands-on, browser/terminal-based platform to learn Git by actually using it — not by reading about it.",
       "stack": ["Python"],
-      "github": "https://github.com/KADHIRAVANEG/learn-git",
+      "github": "https://github.com/JOKER-53/learn-git",
       "live": ""
     },
     {
@@ -121,7 +121,7 @@
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repo is  to identify and remove unwanted node packeges.",
       "stack": ["Rust"],
-      "github": "https://github.com/KADHIRAVANEG/nodewipe",
+      "github": "https://github.com/JOKER-53/nodewipe",
       "live": ""
     },
     {
@@ -130,7 +130,7 @@
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "A modern web-based intelligent compiler with AI-powered error detection and fixing capabilities.",
       "stack": ["HTML"],
-      "github": "https://github.com/KADHIRAVANEG/IntelligentCompiler",
+      "github": "https://github.com/JOKER-53/IntelligentCompiler",
       "live": "https://intelligentcompiler.onrender.com"
     },
     {
@@ -139,21 +139,21 @@
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository is for configuring the grub of the linux",
       "stack": ["CSS"],
-      "github": "https://github.com/KADHIRAVANEG/grub-themes",
+      "github": "https://github.com/JOKER-53/grub-themes",
       "live": "http://joker53.me/grub-themes/"
     }
   ],
   "channels": [
     {
       "label": "EMAIL",
-      "value": "kadhiravanegk@gmail.com",
-      "href": "mailto:kadhiravanegk@gmail.com",
+      "value": "kadhiravan226@gmail.com",
+      "href": "mailto:kadhiravan226@gmail.com",
       "icon": "✉"
     },
     {
       "label": "GITHUB",
       "value": "KADHIRAVANEG",
-      "href": "https://github.com/KADHIRAVANEG",
+      "href": "https://github.com/JOKER-53",
       "icon": "◈"
     },
     {

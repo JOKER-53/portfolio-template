@@ -29,7 +29,7 @@ A modern, highly-customizable, terminal-aesthetic portfolio template built with 
 
 ```bash
 # Clone the repository
-git clone https://github.com/KADHIRAVANEG/portfolio-template.git
+git clone https://github.com/JOKER-53/portfolio-template.git
 cd portfolio-template
 
 # Install dependencies
@@ -142,4 +142,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 **KADHIRAVANEG**
 
-- GitHub: [@KADHIRAVANEG](https://github.com/KADHIRAVANEG)
+- GitHub: [@JOKER-53](https://github.com/JOKER-53)
