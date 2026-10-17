@@ -90,11 +90,11 @@
   "flagship": [
     {
       "id": "F-001",
-      "title": "CRASHANDLEARN",
+      "title": "JOKER 53",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
-      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
-      "github": "https://github.com/JOKER-53/crashandlearn",
+      "description": "This is my README ....",
+      "stack": ["Python"],
+      "github": "https://github.com/JOKER-53/JOKER-53",
       "live": ""
     },
     {
@@ -108,6 +108,15 @@
     },
     {
       "id": "F-003",
+      "title": "CRASHANDLEARN",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
+      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
+      "github": "https://github.com/JOKER-53/crashandlearn",
+      "live": ""
+    },
+    {
+      "id": "F-004",
       "title": "AUTH SIMULATION",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This project simulates an OAuth token replay vulnerability in a university login system using Python Flask.",
@@ -116,22 +125,13 @@
       "live": "https://joker-53.github.io/Auth-Simulation/"
     },
     {
-      "id": "F-004",
+      "id": "F-005",
       "title": "GRUB THEMES",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository is for configuring the grub of the linux",
       "stack": ["JavaScript"],
       "github": "https://github.com/JOKER-53/grub-themes",
       "live": "https://joker-53.github.io/grub-themes/"
-    },
-    {
-      "id": "F-005",
-      "title": "JOKER 53",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "This is my README ....",
-      "stack": ["Python"],
-      "github": "https://github.com/JOKER-53/JOKER-53",
-      "live": ""
     },
     {
       "id": "F-006",
