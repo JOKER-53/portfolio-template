@@ -90,6 +90,15 @@
   "flagship": [
     {
       "id": "F-001",
+      "title": "CRASHANDLEARN",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
+      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
+      "github": "https://github.com/JOKER-53/crashandlearn",
+      "live": "https://joker53.me/crashandlearn/"
+    },
+    {
+      "id": "F-002",
       "title": "PORTFOLIO TEMPLATE",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository gives templete to  build  for building  portfolio ",
@@ -98,21 +107,12 @@
       "live": "https://joker53.vercel.app/"
     },
     {
-      "id": "F-002",
+      "id": "F-003",
       "title": "JOKER 53",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This is my README ....",
       "stack": ["Python"],
       "github": "https://github.com/JOKER-53/JOKER-53",
-      "live": ""
-    },
-    {
-      "id": "F-003",
-      "title": "CRASHANDLEARN",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
-      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
-      "github": "https://github.com/JOKER-53/crashandlearn",
       "live": ""
     },
     {
