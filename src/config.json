@@ -90,12 +90,12 @@
   "flagship": [
     {
       "id": "F-001",
-      "title": "CRASHANDLEARN",
+      "title": "FLAMES",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
-      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
-      "github": "https://github.com/JOKER-53/crashandlearn",
-      "live": "https://joker53.me/crashandlearn/"
+      "description": "FLAMES is an interactive web-based training platform designed to teach firewall and network security concepts in a hands-on, gamified manner. It simulates a FortiOS-styled web interface where students configure firewall policies, network interfaces, and port assignments.",
+      "stack": ["TypeScript"],
+      "github": "https://github.com/JOKER-53/FLAMES",
+      "live": "https://flames-nine-orcin.vercel.app"
     },
     {
       "id": "F-002",
@@ -108,6 +108,15 @@
     },
     {
       "id": "F-003",
+      "title": "CRASHANDLEARN",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
+      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
+      "github": "https://github.com/JOKER-53/crashandlearn",
+      "live": "https://joker53.me/crashandlearn/"
+    },
+    {
+      "id": "F-004",
       "title": "JOKER 53",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This is my README ....",
@@ -116,7 +125,7 @@
       "live": ""
     },
     {
-      "id": "F-004",
+      "id": "F-005",
       "title": "AUTH SIMULATION",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This project simulates an OAuth token replay vulnerability in a university login system using Python Flask.",
@@ -125,22 +134,13 @@
       "live": "https://joker-53.github.io/Auth-Simulation/"
     },
     {
-      "id": "F-005",
+      "id": "F-006",
       "title": "GRUB THEMES",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository is for configuring the grub of the linux",
       "stack": ["JavaScript"],
       "github": "https://github.com/JOKER-53/grub-themes",
       "live": "https://joker-53.github.io/grub-themes/"
-    },
-    {
-      "id": "F-006",
-      "title": "JOKER 53.GITHUB.IO",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "My portfolio website ",
-      "stack": ["CSS"],
-      "github": "https://github.com/JOKER-53/JOKER-53.github.io",
-      "live": "http://joker53.me/"
     }
   ],
   "channels": [
