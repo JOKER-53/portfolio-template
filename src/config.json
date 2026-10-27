@@ -99,6 +99,15 @@
     },
     {
       "id": "F-002",
+      "title": "LEARN GIT",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "A hands-on, browser/terminal-based platform to learn Git by actually using it — not by reading about it. ",
+      "stack": ["HTML"],
+      "github": "https://github.com/JOKER-53/learn-git",
+      "live": ""
+    },
+    {
+      "id": "F-003",
       "title": "PORTFOLIO TEMPLATE",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repository gives templete to  build  for building  portfolio ",
@@ -107,7 +116,7 @@
       "live": "https://joker53.vercel.app/"
     },
     {
-      "id": "F-003",
+      "id": "F-004",
       "title": "CRASHANDLEARN",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
@@ -116,7 +125,7 @@
       "live": "https://joker53.me/crashandlearn/"
     },
     {
-      "id": "F-004",
+      "id": "F-005",
       "title": "JOKER 53",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This is my README ....",
@@ -125,22 +134,13 @@
       "live": ""
     },
     {
-      "id": "F-005",
+      "id": "F-006",
       "title": "AUTH SIMULATION",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This project simulates an OAuth token replay vulnerability in a university login system using Python Flask.",
       "stack": ["HTML"],
       "github": "https://github.com/JOKER-53/Auth-Simulation",
       "live": "https://joker-53.github.io/Auth-Simulation/"
-    },
-    {
-      "id": "F-006",
-      "title": "GRUB THEMES",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "This repository is for configuring the grub of the linux",
-      "stack": ["JavaScript"],
-      "github": "https://github.com/JOKER-53/grub-themes",
-      "live": "https://joker-53.github.io/grub-themes/"
     }
   ],
   "channels": [
