@@ -90,15 +90,33 @@
   "flagship": [
     {
       "id": "F-001",
-      "title": "PORTFOLIO TEMPLATE",
+      "title": "CLOUDCOMPLIANCE",
       "classification": "PUBLIC · OPEN SOURCE",
-      "description": "This repository gives templete to  build  for building  portfolio ",
-      "stack": ["TypeScript"],
-      "github": "https://github.com/JOKER-53/portfolio-template",
-      "live": "https://joker53.vercel.app/"
+      "description": "Infrastructure as Code that provisions a SOC2-aligned AWS security baseline in one command. Zero manual security configuration required.",
+      "stack": ["Python"],
+      "github": "https://github.com/JOKER-53/cloudcompliance",
+      "live": "https://joker-53.github.io/cloudcompliance/"
     },
     {
       "id": "F-002",
+      "title": "NODEWIPE",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "This repo is  to identify and remove unwanted node packeges.",
+      "stack": ["Rust"],
+      "github": "https://github.com/JOKER-53/nodewipe",
+      "live": "https://joker-53.github.io/nodewipe/"
+    },
+    {
+      "id": "F-003",
+      "title": "SECURE KUBE",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "A CIS-aligned, zero-trust Kubernetes cluster provisioned via IaC — no manual security configuration required",
+      "stack": ["Makefile"],
+      "github": "https://github.com/JOKER-53/secure-kube",
+      "live": ""
+    },
+    {
+      "id": "F-004",
       "title": "FLAMES",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "FLAMES is an interactive web-based training platform designed to teach firewall and network security concepts in a hands-on, gamified manner. It simulates a FortiOS-styled web interface where students configure firewall policies, network interfaces, and port assignments.",
@@ -107,40 +125,22 @@
       "live": "https://flames-nine-orcin.vercel.app"
     },
     {
-      "id": "F-003",
+      "id": "F-005",
+      "title": "PORTFOLIO TEMPLATE",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "This repository gives templete to  build  for building  portfolio ",
+      "stack": ["TypeScript"],
+      "github": "https://github.com/JOKER-53/portfolio-template",
+      "live": "https://joker53.vercel.app/"
+    },
+    {
+      "id": "F-006",
       "title": "LEARN GIT",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "A hands-on, browser/terminal-based platform to learn Git by actually using it — not by reading about it. ",
       "stack": ["HTML"],
       "github": "https://github.com/JOKER-53/learn-git",
       "live": ""
-    },
-    {
-      "id": "F-004",
-      "title": "CRASHANDLEARN",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "Training a PPO agent to land a rocket in Gymnasium’s LunarLander-v3 — with reward shaping experiments that intentionally trigger hover hacking and fix it.",
-      "stack": ["Python", "deep-reinforcement-learning", "gymnasium", "lunar-lander"],
-      "github": "https://github.com/JOKER-53/crashandlearn",
-      "live": "https://joker53.me/crashandlearn/"
-    },
-    {
-      "id": "F-005",
-      "title": "JOKER 53",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "This is my README ....",
-      "stack": ["Python"],
-      "github": "https://github.com/JOKER-53/JOKER-53",
-      "live": ""
-    },
-    {
-      "id": "F-006",
-      "title": "AUTH SIMULATION",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "This project simulates an OAuth token replay vulnerability in a university login system using Python Flask.",
-      "stack": ["HTML"],
-      "github": "https://github.com/JOKER-53/Auth-Simulation",
-      "live": "https://joker-53.github.io/Auth-Simulation/"
     }
   ],
   "channels": [
