@@ -90,6 +90,15 @@
   "flagship": [
     {
       "id": "F-001",
+      "title": "PORTFOLIO TEMPLATE",
+      "classification": "PUBLIC · OPEN SOURCE",
+      "description": "This repository gives templete to  build  for building  portfolio ",
+      "stack": ["TypeScript"],
+      "github": "https://github.com/JOKER-53/portfolio-template",
+      "live": "https://joker53.vercel.app/"
+    },
+    {
+      "id": "F-002",
       "title": "CLOUDCOMPLIANCE",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "Infrastructure as Code that provisions a SOC2-aligned AWS security baseline in one command. Zero manual security configuration required.",
@@ -98,7 +107,7 @@
       "live": "https://joker-53.github.io/cloudcompliance/"
     },
     {
-      "id": "F-002",
+      "id": "F-003",
       "title": "NODEWIPE",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "This repo is  to identify and remove unwanted node packeges.",
@@ -107,7 +116,7 @@
       "live": "https://joker-53.github.io/nodewipe/"
     },
     {
-      "id": "F-003",
+      "id": "F-004",
       "title": "SECURE KUBE",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "A CIS-aligned, zero-trust Kubernetes cluster provisioned via IaC — no manual security configuration required",
@@ -116,22 +125,13 @@
       "live": ""
     },
     {
-      "id": "F-004",
+      "id": "F-005",
       "title": "FLAMES",
       "classification": "PUBLIC · OPEN SOURCE",
       "description": "FLAMES is an interactive web-based training platform designed to teach firewall and network security concepts in a hands-on, gamified manner. It simulates a FortiOS-styled web interface where students configure firewall policies, network interfaces, and port assignments.",
       "stack": ["TypeScript"],
       "github": "https://github.com/JOKER-53/FLAMES",
       "live": "https://flames-nine-orcin.vercel.app"
-    },
-    {
-      "id": "F-005",
-      "title": "PORTFOLIO TEMPLATE",
-      "classification": "PUBLIC · OPEN SOURCE",
-      "description": "This repository gives templete to  build  for building  portfolio ",
-      "stack": ["TypeScript"],
-      "github": "https://github.com/JOKER-53/portfolio-template",
-      "live": "https://joker53.vercel.app/"
     },
     {
       "id": "F-006",
